@@ -4,10 +4,6 @@ import Image from 'next/image';
 const Hero = () => {
   return (
     <div className="relative bg-white">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <div className="mx-auto max-w-7xl">
         <div className="relative z-10 lg:w-full lg:max-w-2xl">
           <svg

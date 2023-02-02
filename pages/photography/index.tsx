@@ -3,6 +3,8 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import CenterImage from '../../components/Hero/centerImage';
 import NavBarPhotography from '../../components/Layout/navbarPhotography';
+import ColorBackground from '../../components/Hero/colorBackground';
+import InlineForm from '../../components/Forms/inline';
 
 const Photography: NextPage = () => {
   return (
@@ -12,7 +14,10 @@ const Photography: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBarPhotography />
-      <CenterImage />
+      <ColorBackground />
+      <div className="mx-auto container -mt-11 bg-white">
+        <InlineForm />
+      </div>
     </div>
   );
 };
