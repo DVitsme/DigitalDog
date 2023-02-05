@@ -5,6 +5,7 @@ import CenterImage from '../../components/Hero/centerImage';
 import NavBarPhotography from '../../components/Layout/navbarPhotography';
 import ColorBackground from '../../components/Hero/colorBackground';
 import InlineForm from '../../components/Forms/inline';
+import TieredImages from '../../components/featured/tieredImages';
 
 const Photography: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Photography: NextPage = () => {
       <ColorBackground />
       <div className="mx-auto container -mt-11 bg-white">
         <InlineForm />
+        <TieredImages />
       </div>
     </div>
   );
