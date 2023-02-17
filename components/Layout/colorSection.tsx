@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Section = ({
+const ColorSection = ({
   children,
   color,
   fullWidth,
@@ -13,7 +13,9 @@ const Section = ({
         <div
           className="relative shadow-xl bg-no-repeat bg-right-bottom sm:overflow-hidden sm:rounded-2xl "
           style={{
-            backgroundImage: `url(/images/house_png.png), linear-gradient(to right, rgb(244, 235, 228,1), rgba(244, 235, 228,1))`
+            backgroundImage: `${
+              backgroundImage ? 'url(/images/house_png.png),' : ''
+            } linear-gradient(to right, rgb(244, 235, 228,1), rgba(244, 235, 228,1))`
           }}
         >
           {children}
@@ -23,4 +25,4 @@ const Section = ({
   );
 };
 
-export default Section;
+export default ColorSection;
