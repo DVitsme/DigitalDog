@@ -1,8 +1,10 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
+#__next {
+  min-height: 100%;
+}
 .large-container {
   @apply mx-auto max-w-full sm:px-6 lg:px-12;
 }
-
-@tailwind utilities;
