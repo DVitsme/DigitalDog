@@ -1,39 +1,49 @@
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Tab } from '@headlessui/react';
 
 import { Container } from './Container';
 import backgroundImage from 'public/images/background-features.jpg';
 import screenshotExpenses from 'public/images/screenshots/expenses.png';
-import screenshotPayroll from 'public/images/screenshots/payroll.png';
 import screenshotReporting from 'public/images/screenshots/reporting.png';
 import screenshotVatReturns from 'public/images/screenshots/vat-returns.png';
+import interiorHousing from 'public/images/traditional_house/interior.jpg';
+import twilightBaron from 'public/images/twilight/barn_twilight.jpg';
+import virutalStaging from 'public/images/vitural_staging/virtual-staging.jpg';
+import matterportDollhouse from 'public/images/3D/matterport-dollhouse.png';
 
 const features = [
   {
-    title: 'Payroll',
+    title: 'Traditional Photography',
     description:
       "Keep track of everyone's salaries and whether or not they've been paid. Direct deposit not supported.",
-    image: screenshotPayroll
+    image: interiorHousing,
+    url: '/photography/realestate_photography'
   },
   {
-    title: 'Claim expenses',
+    title: 'Twilight Photos',
     description:
       "All of your receipts organized into one place, as long as you don't mind typing in the data by hand.",
-    image: screenshotExpenses
+    image: twilightBaron,
+    url: '/photography/twilight'
   },
   {
-    title: 'VAT handling',
+    title: 'Virutal Staging',
     description:
       "We only sell our software to companies who don't deal with VAT at all, so technically we do all the VAT stuff they need.",
-    image: screenshotVatReturns
+    image: virutalStaging,
+    url: '/photography/virutalStaging'
   },
   {
-    title: 'Reporting',
+    title: '3D Walk-Thru Tours',
     description:
       'Easily export your data into an Excel spreadsheet where you can do whatever the hell you want with it.',
-    image: screenshotReporting
+    image: matterportDollhouse,
+    url: '/photography/3Dtours'
   }
 ];
 
@@ -135,13 +145,15 @@ export function PrimaryFeatures() {
                       </p>
                     </div>
                     <div className="mt-10 w-[45rem] overflow-hidden rounded-xl bg-slate-50 shadow-xl shadow-blue-900/20 sm:w-auto lg:mt-0 lg:w-[67.8125rem]">
-                      <Image
-                        className="w-full"
-                        src={feature.image}
-                        alt=""
-                        priority
-                        sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
-                      />
+                      <Link href={feature.url}>
+                        <Image
+                          className="w-full"
+                          src={feature.image}
+                          alt=""
+                          priority
+                          sizes="(min-width: 1024px) 67.8125rem, (min-width: 640px) 100vw, 45rem"
+                        />
+                      </Link>
                     </div>
                   </Tab.Panel>
                 ))}
